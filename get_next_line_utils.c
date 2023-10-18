@@ -6,7 +6,7 @@
 /*   By: jde-meo <jde-meo@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:45:18 by jde-meo           #+#    #+#             */
-/*   Updated: 2023/10/17 16:17:33 by jde-meo          ###   ########.fr       */
+/*   Updated: 2023/10/18 16:16:53 by jde-meo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ char	*strcat_m(char *dest, char *src, int src_size)
 {
 	char	*str;
 	size_t	len1;
-	size_t	len2;
 
 	len1 = 0;
 	if (dest)
@@ -39,7 +38,7 @@ char	*strcat_m(char *dest, char *src, int src_size)
 		ft_memcpy(str, dest, len1 + 1, -1);
 	if (dest)
 		free(dest);
-	while(src_size-- > 0 && *src)
+	while (src_size-- > 0 && *src)
 		str[len1++] = *src++;
 	str[len1] = '\0';
 	return (str);
@@ -67,7 +66,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n, int value)
 	return (dest);
 }
 
-size_t	search_char(char buffer[BUFFER_SIZE], char c, int start)
+size_t	sch(char buffer[BUFFER_SIZE], char c, int start)
 {
 	int	i;
 
