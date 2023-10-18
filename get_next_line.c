@@ -3,15 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jde-meo <jde-meo@student.42perpignan.fr    +#+  +:+       +#+        */
+/*   By: jde-meo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:45:37 by jde-meo           #+#    #+#             */
-/*   Updated: 2023/10/18 16:22:00 by jde-meo          ###   ########.fr       */
+/*   Updated: 2023/10/18 23:58:22 by jde-meo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 #include <stdio.h>
+
+int	ft_min(int i1, int i2)
+{
+	if (i1 < i2)
+		return (i1);
+	return (i2);
+}
 
 int	get_last_read_line(char last[BUFFER_SIZE], char **line)
 {
@@ -22,8 +29,13 @@ int	get_last_read_line(char last[BUFFER_SIZE], char **line)
 	fllen = 0;
 	if (rs + 1 < BUFFER_SIZE)
 		fllen = sch(last, '\n', rs + 1) - rs;
+	fllen = ft_min(fllen, sch(last, '\0', rs + 1) - rs);
 	if (fllen > 0)
+	{
+		if (last[rs + 1] == '\0')
+			return (0);
 		*line = strcat_m(*line, last + rs + 1, fllen);
+	}
 	if (last[rs] == '\n')
 		last[rs] = '?';
 	return (sch(last, '\n', 0) == BUFFER_SIZE);
