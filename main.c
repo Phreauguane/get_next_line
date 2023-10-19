@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jde-meo <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jde-meo <jde-meo@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:33:04 by jde-meo           #+#    #+#             */
-/*   Updated: 2023/10/18 23:51:37 by jde-meo          ###   ########.fr       */
+/*   Updated: 2023/10/19 14:25:07 by jde-meo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int	main()
 {
-	int	fd1 = open("test.txt", O_RDONLY);
+	int	fd1 = open("lord_of_the_rings.txt", O_RDONLY);
 	//int	fd2 = open("test2.txt", O_RDONLY);
 	char	*str1, *str2;
 	int		calls = 0;
