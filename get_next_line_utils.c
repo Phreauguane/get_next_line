@@ -6,13 +6,11 @@
 /*   By: jde-meo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 20:19:56 by jde-meo           #+#    #+#             */
-/*   Updated: 2023/10/22 21:09:58 by jde-meo          ###   ########.fr       */
+/*   Updated: 2023/10/24 16:57:15 by jde-meo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-#include <stdio.h>
 
 size_t	ft_strlen(char *s)
 {

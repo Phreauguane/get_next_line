@@ -6,13 +6,11 @@
 /*   By: jde-meo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 20:04:11 by jde-meo           #+#    #+#             */
-/*   Updated: 2023/10/22 21:06:57 by jde-meo          ###   ########.fr       */
+/*   Updated: 2023/10/24 16:57:20 by jde-meo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-#include <stdio.h>
 
 void	process_rest(char rest[BUFFER_SIZE], char **line)
 {
