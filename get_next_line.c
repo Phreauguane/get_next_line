@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jde-meo <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jde-meo <jde-meo@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 20:04:11 by jde-meo           #+#    #+#             */
-/*   Updated: 2023/10/24 16:57:20 by jde-meo          ###   ########.fr       */
+/*   Updated: 2023/11/14 18:16:59 by jde-meo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	process_rest(char rest[BUFFER_SIZE], char **line)
 	int	j;
 
 	i = 0;
-	while (rest[i] != '\n' && rest[i] != '\0' && i++ < BUFFER_SIZE);
+	while (rest[i] != '\n' && rest[i] != '\0' && i < BUFFER_SIZE)
+		i++;
 	if (rest[0] == '\n')
 		*line = str_addc(*line, '\n');
 	else if (i > 0 || rest[i] == '\n')
@@ -60,5 +61,5 @@ char	*get_next_line(int fd)
 		if (rsize > 0)
 			process_rest(rest[fd], &line);
 	}
-	return (line);	
+	return (line);
 }
